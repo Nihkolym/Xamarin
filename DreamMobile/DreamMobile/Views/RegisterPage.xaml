@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Dream.Views.RegisterPage"
+             xmlns:viewModels="clr-namespace:Dream.ViewModels">
+    <ContentPage.BindingContext>
+        <viewModels:RegisterViewModel/>
+    </ContentPage.BindingContext>
+
+    <StackLayout Orientation="Vertical"
+                 VerticalOptions="Center" 
+                 Spacing="30"
+                 Padding="30">
+
+        <Entry Text="{Binding Email}" 
+               Placeholder="Email"
+               FontSize="30"/>
+
+
+        <Entry Text="{Binding Password}"
+               Placeholder="Your Password" 
+               IsPassword="True"
+               FontSize="30"/>
+        <Entry Text="{Binding ConfirmPassword}" 
+               Placeholder="Confirm Password"
+               IsPassword="True"
+               FontSize="30"/>
+
+        <Button Command="{Binding RegisterCommand}"
+                Text="Register"
+                TextColor="White"
+                BackgroundColor="Crimson"
+                FontSize="30"/>
+
+        <Button Text="Go to login Page"
+                Clicked="Button_Clicked_1"/>
+
+    </StackLayout>
+</ContentPage>
