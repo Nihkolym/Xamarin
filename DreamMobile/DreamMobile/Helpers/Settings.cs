@@ -17,9 +17,6 @@ namespace DreamMobile.Helpers
                 return CrossSettings.Current;
             }
         }
-
-
-
         public static string Username
         {
             get

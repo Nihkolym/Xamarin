@@ -10,28 +10,30 @@
     </ContentPage.BindingContext>
 
     <StackLayout>
-        <Label Text="Sensors show:"/>
-        
+        <Label Text="Sensors show:" FontSize="Medium"/>
+
         <Label Text="Temperature" 
                FontSize="Large"
                BackgroundColor="Red"
                VerticalOptions="Center"/>
-        
+
         <Label Text="{Binding Temperature}"
                FontSize="Large"
                BackgroundColor="Red"
                VerticalOptions="Center"/>
-        
+
         <Label Text="Humidity"
                FontSize="Large"
                BackgroundColor="Aqua"
                VerticalOptions="Center"/>
-        
+
         <Label Text="{Binding Humidity}" 
                FontSize="Large"
                BackgroundColor="Aqua"
                VerticalOptions="Center"/>
 
+        
+
     </StackLayout>
-    
+
 </ContentPage>

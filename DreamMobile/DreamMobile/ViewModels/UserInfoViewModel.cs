@@ -10,6 +10,9 @@ namespace DreamMobile.ViewModels
     {
         public string Username => Settings.Username;
 
-        public Status Sickness { get; set; }
+        public string Gender => $"Your Gender ({Settings.Gender})";
+
+        public string Sickness => $"Your Sickness  ({Settings.Sickness})";
+        
     }
 }

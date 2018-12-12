@@ -30,7 +30,10 @@
                    FontSize="Large"
                    BackgroundColor="Aqua" 
                    VerticalOptions="Center"/>
-            
+
+            <Label Text="Tips:" FontSize="Large"/>
+            <Label Text="Close your eyes and rest, Massage your neck and temples,Warm up your neck Try putting a heating pad or a warm cloth around your neck and the base of your skull to ease tension headaches, Relax. Minimize stress.Watch what you eat and drink." FontSize="Micro"/>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

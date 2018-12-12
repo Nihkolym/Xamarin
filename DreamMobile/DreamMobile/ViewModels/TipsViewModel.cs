@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Text;
-using DreamMobile.Infrastructure;
 using DreamMobile.Helpers;
 
 namespace DreamMobile.ViewModels
 {
     public class TipsViewModel
     {
-        public Status Sickness { get; set; }
         
 
         public  int DesiresTemperature { get; set; }
@@ -31,5 +28,6 @@ namespace DreamMobile.ViewModels
             DesiresTemperature = random.Next(15, 25);
             DesiresHumidity = random.Next(30, 60);
         }
+
     }
 }

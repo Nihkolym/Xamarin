@@ -35,8 +35,10 @@ namespace DreamMobile.Views
 
         private void Button_Clicked_3(object sender, EventArgs e)
         {
+            Settings.Username = "";
+            Settings.Password = "";
             Settings.AccessToken = "";
-            Navigation.PushModalAsync(new LoginPage());
+            Navigation.PushAsync(new LoginPage());
         }
 
         private void Button_Clicked_4(object sender, EventArgs e)
