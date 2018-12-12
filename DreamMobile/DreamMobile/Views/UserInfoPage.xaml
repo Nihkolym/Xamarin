@@ -24,7 +24,7 @@
             </Picker>
             <Label Text="Your Gender"
                    TextColor="Green"/>
-            <Picker x:Name="genderPicker" SelectedIndexChanged="GenderPicker_SelectedIndexChanged">
+            <Picker x:Name="genderPicker" SelectedIndexChanged="GenderPicker_SelectedIndexChanged" SelectedItem="Male">
                 <Picker.Items>
                     <x:String>Male</x:String>
                     <x:String>Female</x:String>

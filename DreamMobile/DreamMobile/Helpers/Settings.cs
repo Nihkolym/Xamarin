@@ -57,7 +57,7 @@ namespace DreamMobile.Helpers
         {
             get
             {
-                return AppSettings.GetValueOrDefault("Sickness", "");
+                return AppSettings.GetValueOrDefault("Sickness", "Healthy");
             }
             set
             {
@@ -68,7 +68,7 @@ namespace DreamMobile.Helpers
         {
             get
             {
-                return AppSettings.GetValueOrDefault("Gender", "");
+                return AppSettings.GetValueOrDefault("Gender", "Male");
             }
             set
             {
