@@ -10,7 +10,27 @@
     <ContentPage.Content>
         <StackLayout>
             <Label Text="{Binding Greeting}"
-                VerticalOptions="Center" />
+                VerticalOptions="Center" FontSize="Medium" />
+            <Label Text="DesiresTemperature" 
+                   FontSize="Large" 
+                   BackgroundColor="Red"
+                   VerticalOptions="Center"/>
+            
+            <Label Text="{Binding DesiresTemperature}"
+                   FontSize="Large" 
+                   BackgroundColor="Red" 
+                   VerticalOptions="Center"/>
+            
+            <Label Text="DesiresHumidity" 
+                   FontSize="Large"
+                   BackgroundColor="Aqua"
+                   VerticalOptions="Center"/>
+            
+            <Label Text="{Binding DesiresHumidity}"
+                   FontSize="Large"
+                   BackgroundColor="Aqua" 
+                   VerticalOptions="Center"/>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

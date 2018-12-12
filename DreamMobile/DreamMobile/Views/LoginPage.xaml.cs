@@ -8,6 +8,7 @@ using DreamMobile.Helpers;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using DreamMobile.ViewModels;
 
 namespace DreamMobile.Views
 {
@@ -27,9 +28,9 @@ namespace DreamMobile.Views
 
         private async void Button_Clicked_1(object sender, EventArgs e)
         {
-            if(Settings.AccessToken != null)
+            if (Settings.AccessToken != "")
             {
-                await Navigation.PushAsync(new DetailPage());
+                await Navigation.PushModalAsync(new DetailPage());
             }
         }
     }

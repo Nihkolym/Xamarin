@@ -14,6 +14,7 @@ namespace DreamMobile.Views
 	{
 		public DetailPage ()
 		{
+           
 			InitializeComponent ();
 		}
 
@@ -35,7 +36,7 @@ namespace DreamMobile.Views
         private void Button_Clicked_3(object sender, EventArgs e)
         {
             Settings.AccessToken = "";
-            Navigation.PushAsync(new LoginPage());
+            Navigation.PushModalAsync(new LoginPage());
         }
 
         private void Button_Clicked_4(object sender, EventArgs e)

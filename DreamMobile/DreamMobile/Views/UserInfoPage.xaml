@@ -10,11 +10,13 @@
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Username"
+                   FontSize="Medium"
                    TextColor="Green"/>
             <Label Text="{Binding Username }" />
             <Label Text="Your Sickness"
+                   FontSize="Medium"
                    TextColor="Green"/>
-            <Picker x:Name="picker" SelectedIndexChanged="Picker_SelectedIndexChanged">
+            <Picker x:Name="picker" SelectedIndexChanged="Picker_SelectedIndexChanged" FontSize="Medium">
                 <Picker.Items>
                     <x:String>Headache</x:String>
                     <x:String>Stomachache</x:String>
@@ -23,8 +25,9 @@
                 </Picker.Items>
             </Picker>
             <Label Text="Your Gender"
-                   TextColor="Green"/>
-            <Picker x:Name="genderPicker" SelectedIndexChanged="GenderPicker_SelectedIndexChanged" SelectedItem="Male">
+                   TextColor="Green"
+                   FontSize="Medium"/>
+            <Picker x:Name="genderPicker" SelectedIndexChanged="GenderPicker_SelectedIndexChanged" SelectedItem="Male" FontSize="Medium">
                 <Picker.Items>
                     <x:String>Male</x:String>
                     <x:String>Female</x:String>

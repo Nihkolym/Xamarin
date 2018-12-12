@@ -16,18 +16,12 @@ namespace DreamMobile.ViewModels
 
         public string Password { get; set; }
 
-        public ICommand LoginCommand
-        {
-            get
+        public ICommand LoginCommand =>
+            new Command(async () =>
             {
-                return new Command(async () =>
-                {
-                    var acessToken = await _apiServices.LoginAsync(Username, Password);
-                    Settings.AccessToken = acessToken;
-
-                });
-            }
-        }
+                var acessToken = await _apiServices.LoginAsync(Username, Password);
+                Settings.AccessToken = acessToken;
+            });
 
         public LoginViewModel()
         {

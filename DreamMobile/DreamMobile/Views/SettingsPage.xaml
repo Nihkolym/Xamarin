@@ -4,9 +4,13 @@
              x:Class="DreamMobile.Views.SettingsPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Language"/>
+            <Picker x:Name="languagePicker" SelectedIndexChanged="LanguagePicker_SelectedIndexChanged" FontSize="Medium">
+                <Picker.Items>
+                    <x:String>Русский</x:String>
+                    <x:String>English</x:String>
+                </Picker.Items>
+            </Picker>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

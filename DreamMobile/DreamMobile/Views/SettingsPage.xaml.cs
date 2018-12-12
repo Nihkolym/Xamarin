@@ -16,5 +16,10 @@ namespace DreamMobile.Views
 		{
 			InitializeComponent ();
 		}
-	}
+
+        private void LanguagePicker_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
 }
