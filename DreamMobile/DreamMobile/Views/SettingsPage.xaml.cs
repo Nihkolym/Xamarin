@@ -10,11 +10,10 @@ using Xamarin.Forms.Xaml;
 namespace DreamMobile.Views
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class TemperaturePage : ContentPage
+	public partial class SettingsPage : ContentPage
 	{
-		public TemperaturePage ()
+		public SettingsPage ()
 		{
-            var detailPage = new DetailPage();
 			InitializeComponent ();
 		}
 	}

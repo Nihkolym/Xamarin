@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DreamMobile.Views.DetailPage">
+    <MasterDetailPage.Master>
+        <ContentPage Padding="10" BackgroundColor="Gray" Title="Master">
+            <ContentPage.Content>
+                <StackLayout Margin="5,30,5,5">
+                    <Label Text="Healthy Dream"/>
+                    <Button
+                        Text="Tips"
+                        BackgroundColor="White"
+                        Clicked="Button_Clicked"/>
+                    <Button
+                        Text="Temperature"
+                        BackgroundColor="White"
+                        Clicked="Button_Clicked_1"/>
+                    <Button
+                        Text="Settings"
+                        BackgroundColor="White"
+                        Clicked="Button_Clicked_2"/>
+                    <Button
+                        Text="Sign out"
+                        BackgroundColor="White"
+                        Clicked="Button_Clicked_3"/>
+
+
+                </StackLayout>
+            </ContentPage.Content>
+        </ContentPage>
+    </MasterDetailPage.Master>
+
+    <MasterDetailPage.Detail>
+        <ContentPage Padding="10">
+            <ContentPage.Content>
+                <StackLayout Margin="5,30,5,5">
+                    <Image Source="https://www.castlegateandderwentsurgery.nhs.uk/media/content/images/Healthy_Fruit.jpg"/>
+                </StackLayout>
+            </ContentPage.Content>
+        </ContentPage>
+    </MasterDetailPage.Detail>
+
+</MasterDetailPage>

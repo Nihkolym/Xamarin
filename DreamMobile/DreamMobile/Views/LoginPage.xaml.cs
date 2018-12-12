@@ -29,7 +29,7 @@ namespace DreamMobile.Views
         {
             if(Settings.AccessToken != null)
             {
-                await Navigation.PushAsync(new TemperaturePage());
+                await Navigation.PushAsync(new DetailPage());
             }
         }
     }

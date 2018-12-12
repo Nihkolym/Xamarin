@@ -1,4 +1,5 @@
 ﻿using Dream.Views;
+using DreamMobile.Views;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
