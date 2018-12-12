@@ -53,6 +53,28 @@ namespace DreamMobile.Helpers
                 AppSettings.AddOrUpdateValue("AccessToken", value);
             }
         }
+        public static string Sickness
+        {
+            get
+            {
+                return AppSettings.GetValueOrDefault("Sickness", "");
+            }
+            set
+            {
+                AppSettings.AddOrUpdateValue("Sickness", value);
+            }
+        }
+        public static string Gender
+        {
+            get
+            {
+                return AppSettings.GetValueOrDefault("Gender", "");
+            }
+            set
+            {
+                AppSettings.AddOrUpdateValue("Gender", value);
+            }
+        }
 
     }
 }

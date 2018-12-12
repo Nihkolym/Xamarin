@@ -8,6 +8,10 @@
                 <StackLayout Margin="5,30,5,5">
                     <Label Text="Healthy Dream"/>
                     <Button
+                        Text="My info"
+                        BackgroundColor="White"
+                        Clicked="Button_Clicked_4"/>
+                    <Button
                         Text="Tips"
                         BackgroundColor="White"
                         Clicked="Button_Clicked"/>
@@ -20,11 +24,9 @@
                         BackgroundColor="White"
                         Clicked="Button_Clicked_2"/>
                     <Button
-                        Text="Sign out"
+                        Text="Sign Out"
                         BackgroundColor="White"
                         Clicked="Button_Clicked_3"/>
-
-
                 </StackLayout>
             </ContentPage.Content>
         </ContentPage>
@@ -34,7 +36,7 @@
         <ContentPage Padding="10">
             <ContentPage.Content>
                 <StackLayout Margin="5,30,5,5">
-                    <Image Source="https://www.castlegateandderwentsurgery.nhs.uk/media/content/images/Healthy_Fruit.jpg"/>
+                    <Image Source="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwuFGMgSjQvXkkB_nmzCxNXCdPoDK58suywaqlsjQ2dOMuCLaa"/>
                 </StackLayout>
             </ContentPage.Content>
         </ContentPage>

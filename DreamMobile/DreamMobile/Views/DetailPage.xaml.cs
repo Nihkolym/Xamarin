@@ -37,5 +37,10 @@ namespace DreamMobile.Views
             Settings.AccessToken = "";
             Navigation.PushAsync(new LoginPage());
         }
+
+        private void Button_Clicked_4(object sender, EventArgs e)
+        {
+            Detail = new NavigationPage(new UserInfoPage());
+        }
     }
 }
