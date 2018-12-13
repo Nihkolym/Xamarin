@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DreamMobile.iOS", "DreamMob
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DreamMobile.UWP", "DreamMobile\DreamMobile.UWP\DreamMobile.UWP.csproj", "{B8DE586B-8E58-467B-96AD-679D62C8E2E8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DreamMobile", "DreamMobile\DreamMobile\DreamMobile.csproj", "{724F2BCE-2B96-41F7-B81E-3C1A153520A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DreamMobile", "DreamMobile\DreamMobile\DreamMobile.csproj", "{724F2BCE-2B96-41F7-B81E-3C1A153520A1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

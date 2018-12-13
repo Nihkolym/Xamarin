@@ -19,8 +19,7 @@ namespace Dream.ViewModels
         public string Email { get; set; }
 
         public string ConfirmPassword { get; set; }
-
-        public string Message { get; set; }
+        
 
         public Command RegisterCommand
         {
@@ -29,18 +28,11 @@ namespace Dream.ViewModels
                 return new Command(async() =>
                 {
                 bool isSuccess = await apiServices.RegisterAsynk(Password, ConfirmPassword, Email);
-
-                    Username = Email;
-                    Settings.Username = Username;
-                    Settings.Password = Password;
-
                     if (isSuccess)
                     {
-                        Message = "Register Complete";
-                    }
-                    else
-                    {
-                        Message = "Something went wrong";
+                        Username = Email;
+                        Settings.Username = Username;
+                        Settings.Password = Password;
                     }
                     
                 });

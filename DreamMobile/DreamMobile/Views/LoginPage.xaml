@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:DreamMobile.ViewModels"
-             x:Class="DreamMobile.Views.LoginPage">
+             x:Class="DreamMobile.Views.LoginPage"
+             xmlns:behaviors ="clr-namespace:DreamMobile.Validators">
 
     <ContentPage.BindingContext>
         <vm:LoginViewModel/>
@@ -14,28 +15,33 @@
                  Padding="30"
                  Spacing="30">
 
-        <Entry Text="{Binding Password}"
+        <Entry Text="{Binding Username}"
                x:Name="EmailEntry"
                Placeholder="Email"
-               FontSize="30"/>
+               FontSize="30">
+            <Entry.Behaviors>
+                <behaviors:EmailValidationBehavior/>
+            </Entry.Behaviors>
+        </Entry>
 
         <Entry Text="{Binding Password}"
                x:Name="PasswordEntry"
                IsPassword="True"
                Placeholder="Password"
-               FontSize="30"/>
+               FontSize="30">
+            <Entry.Behaviors>
+                <behaviors:PasswordValidationBehavior/>
+            </Entry.Behaviors>
+        </Entry>
 
+        <Label x:Name="ErrorLable"/>
+        
         <Button Command="{Binding LoginCommand}"
                 Text="Login"
                 TextColor="White"
                 BackgroundColor="DodgerBlue"
                 FontSize="30"
                 Clicked="Button_Clicked_1"/>
-        <Button Text="Go to my page"
-                TextColor="White"
-                BackgroundColor="Blue"
-                FontSize="30"
-                Clicked="Button_Clicked_2"/>
 
         <Button Text="Go to registration"
                 Clicked="Button_Clicked"/>

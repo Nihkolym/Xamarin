@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Dream.Views.RegisterPage"
-             xmlns:viewModels="clr-namespace:Dream.ViewModels">
+             xmlns:viewModels="clr-namespace:Dream.ViewModels"
+              xmlns:behaviors ="clr-namespace:DreamMobile.Validators">
     <ContentPage.BindingContext>
         <viewModels:RegisterViewModel/>
     </ContentPage.BindingContext>
@@ -14,23 +15,40 @@
 
         <Entry Text="{Binding Email}" 
                Placeholder="Email"
-               FontSize="30"/>
-
+               FontSize="30">
+            <Entry.Behaviors>
+                <behaviors:EmailValidationBehavior/>
+            </Entry.Behaviors>
+        </Entry>
 
         <Entry Text="{Binding Password}"
                Placeholder="Your Password" 
+               x:Name="Password"
                IsPassword="True"
-               FontSize="30"/>
+               FontSize="30">
+            <Entry.Behaviors>
+                <behaviors:PasswordValidationBehavior/>
+            </Entry.Behaviors>
+        </Entry>
         <Entry Text="{Binding ConfirmPassword}" 
-               Placeholder="Confirm Password"
+               Placeholder="ConfirmPassword"
+               x:Name="ConfirmPassword"
                IsPassword="True"
-               FontSize="30"/>
+               FontSize="30">
+            <Entry.Behaviors>
+                <behaviors:PasswordValidationBehavior/>
+            </Entry.Behaviors>
+        </Entry>
 
+        <Label x:Name="ErrorLable"
+               TextColor="Red"
+               FontSize="Medium"/>
         <Button Command="{Binding RegisterCommand}"
                 Text="Register"
                 TextColor="White"
                 BackgroundColor="Crimson"
-                FontSize="30"/>
+                FontSize="30"
+                Clicked="Button_Clicked"/>
 
         <Button Text="Go to login Page"
                 Clicked="Button_Clicked_1"/>

@@ -11,6 +11,7 @@ using Xamarin.Forms.Xaml;
 using DreamMobile.ViewModels;
 using System.Threading;
 using DreamMobile.Services;
+using System.Text.RegularExpressions;
 
 namespace DreamMobile.Views
 {
@@ -18,7 +19,6 @@ namespace DreamMobile.Views
     public partial class LoginPage : ContentPage
     {
         private ApiServices _apiServices = new ApiServices();
-
 
         private string _accessToken = "";
 
@@ -35,9 +35,7 @@ namespace DreamMobile.Views
         private async void Button_Clicked_1(object sender, EventArgs e)
         {
             await Login();
-
             await PushMainPage();
-
         }
 
         private async Task PushMainPage()
@@ -50,12 +48,24 @@ namespace DreamMobile.Views
 
         private async Task Login()
         {
-            _accessToken = await _apiServices.LoginAsync(EmailEntry.Text, PasswordEntry.Text);
+            var email = EmailEntry.Text;
+            var password = PasswordEntry.Text;
+            var emailPattern = @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$";
+            _accessToken = await _apiServices.LoginAsync(email, password);
+
+            if (!Regex.IsMatch(email, emailPattern))
+            {
+                ErrorLable.Text = "not valid";
+            }
+            else
+            {
+                ErrorLable.Text = "";
+            }
             Settings.AccessToken = _accessToken;
             if (_accessToken != "")
             {
-                Settings.Username = EmailEntry.Text;
-                Settings.Password = PasswordEntry.Text;
+                Settings.Username = email;
+                Settings.Password = password;
             }
         }
     }
