@@ -7,16 +7,20 @@
     <ContentPage.BindingContext>
         <vm:LoginViewModel/>
     </ContentPage.BindingContext>
+
+
     <StackLayout Orientation="Vertical"
                  VerticalOptions="Center" 
                  Padding="30"
                  Spacing="30">
-        
-        <Entry Text="{Binding Username}"
+
+        <Entry Text="{Binding Password}"
+               x:Name="EmailEntry"
                Placeholder="Email"
                FontSize="30"/>
-        
+
         <Entry Text="{Binding Password}"
+               x:Name="PasswordEntry"
                IsPassword="True"
                Placeholder="Password"
                FontSize="30"/>

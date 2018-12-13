@@ -8,7 +8,7 @@ namespace DreamMobile.ViewModels
     {
         
 
-        public  int DesiresTemperature { get; set; }
+        public int DesiresTemperature { get; set; }
 
         public int DesiresHumidity { get; set; }
 

@@ -21,7 +21,7 @@
                    BackgroundColor="Red" 
                    VerticalOptions="Center"/>
             
-            <Label Text="DesiresHumidity" 
+            <Label Text="DesiresHumidity (%)" 
                    FontSize="Large"
                    BackgroundColor="Aqua"
                    VerticalOptions="Center"/>

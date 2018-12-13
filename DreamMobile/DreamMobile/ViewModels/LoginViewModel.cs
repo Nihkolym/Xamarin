@@ -12,7 +12,7 @@ namespace DreamMobile.ViewModels
         
         public string Username { get; set; }
 
-        private static string _accessToken = "";
+        private string _accessToken = "";
         
         public string Password { get; set; }
         

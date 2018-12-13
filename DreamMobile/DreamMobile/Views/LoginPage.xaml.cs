@@ -10,17 +10,22 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using DreamMobile.ViewModels;
 using System.Threading;
+using DreamMobile.Services;
 
 namespace DreamMobile.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class LoginPage : ContentPage
     {
+        private ApiServices _apiServices = new ApiServices();
+
+
+        private string _accessToken = "";
+
         public LoginPage()
         {
             InitializeComponent();
         }
-
 
         private async void Button_Clicked(object sender, EventArgs e)
         {
@@ -29,17 +34,28 @@ namespace DreamMobile.Views
 
         private async void Button_Clicked_1(object sender, EventArgs e)
         {
+            await Login();
+
+            await PushMainPage();
+
+        }
+
+        private async Task PushMainPage()
+        {
             if (Settings.AccessToken.Any())
             {
                 await Navigation.PushAsync(new DetailPage());
             }
         }
 
-        private async void Button_Clicked_2(object sender, EventArgs e)
+        private async Task Login()
         {
-            if (Settings.AccessToken.Any())
+            _accessToken = await _apiServices.LoginAsync(EmailEntry.Text, PasswordEntry.Text);
+            Settings.AccessToken = _accessToken;
+            if (_accessToken != "")
             {
-                await Navigation.PushAsync(new DetailPage());
+                Settings.Username = EmailEntry.Text;
+                Settings.Password = PasswordEntry.Text;
             }
         }
     }
