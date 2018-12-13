@@ -21,7 +21,7 @@ namespace DreamMobile.ViewModels
             {
                 _accessToken = await _apiServices.LoginAsync(Username, Password);
                 Settings.AccessToken = _accessToken;
-                if(_accessToken.Any())
+                if(_accessToken != "")
                 {
                     Settings.Username = Username;
                     Settings.Password = Password;

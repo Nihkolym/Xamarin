@@ -27,11 +27,19 @@ namespace DreamMobile.Views
             await Navigation.PushAsync(new RegisterPage());
         }
 
-        private void Button_Clicked_1(object sender, EventArgs e)
+        private async void Button_Clicked_1(object sender, EventArgs e)
         {
             if (Settings.AccessToken.Any())
             {
-                Navigation.PushAsync(new DetailPage());
+                await Navigation.PushAsync(new DetailPage());
+            }
+        }
+
+        private async void Button_Clicked_2(object sender, EventArgs e)
+        {
+            if (Settings.AccessToken.Any())
+            {
+                await Navigation.PushAsync(new DetailPage());
             }
         }
     }

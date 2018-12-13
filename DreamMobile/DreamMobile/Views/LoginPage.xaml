@@ -27,6 +27,11 @@
                 BackgroundColor="DodgerBlue"
                 FontSize="30"
                 Clicked="Button_Clicked_1"/>
+        <Button Text="Go to my page"
+                TextColor="White"
+                BackgroundColor="Blue"
+                FontSize="30"
+                Clicked="Button_Clicked_2"/>
 
         <Button Text="Go to registration"
                 Clicked="Button_Clicked"/>
