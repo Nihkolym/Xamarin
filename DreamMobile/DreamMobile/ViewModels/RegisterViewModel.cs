@@ -19,7 +19,6 @@ namespace Dream.ViewModels
         public string Email { get; set; }
 
         public string ConfirmPassword { get; set; }
-        
 
         public Command RegisterCommand
         {
@@ -34,7 +33,6 @@ namespace Dream.ViewModels
                         Settings.Username = Username;
                         Settings.Password = Password;
                     }
-                    
                 });
             }
         }

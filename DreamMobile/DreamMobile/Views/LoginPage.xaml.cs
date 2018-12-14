@@ -44,23 +44,19 @@ namespace DreamMobile.Views
             {
                 await Navigation.PushAsync(new DetailPage());
             }
+            else
+            {
+                ErrorLable.Text = "Wrong email or password, please try again.";
+            }
         }
 
         private async Task Login()
         {
             var email = EmailEntry.Text;
             var password = PasswordEntry.Text;
-            var emailPattern = @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$";
-            _accessToken = await _apiServices.LoginAsync(email, password);
 
-            if (!Regex.IsMatch(email, emailPattern))
-            {
-                ErrorLable.Text = "not valid";
-            }
-            else
-            {
-                ErrorLable.Text = "";
-            }
+            _accessToken = await _apiServices.LoginAsync(email, password);
+            
             Settings.AccessToken = _accessToken;
             if (_accessToken != "")
             {

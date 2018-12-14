@@ -6,11 +6,9 @@ namespace DreamMobile.ViewModels
 {
     public class TipsViewModel
     {
-        
+        public static int DesiresTemperature { get => 31; set { } }
 
-        public int DesiresTemperature { get; set; }
-
-        public int DesiresHumidity { get; set; }
+        public static int DesiresHumidity  { get => 33; set { } }
 
         public string Greeting
         {
@@ -24,9 +22,6 @@ namespace DreamMobile.ViewModels
 
         public TipsViewModel()
         {
-            Random random = new Random();
-            DesiresTemperature = random.Next(15, 25);
-            DesiresHumidity = random.Next(30, 60);
         }
 
     }

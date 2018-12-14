@@ -14,20 +14,20 @@
 
         <Label Text="Temperature" 
                FontSize="Large"
-               BackgroundColor="Red"
-               VerticalOptions="Center"/>
+               VerticalOptions="Center"
+               x:Name="TemperatureTextLabel"/>
 
-        <Label Text="{Binding Temperature}"
+        <Label x:Name="TemperatureLabel"
                FontSize="Large"
-               BackgroundColor="Red"
                VerticalOptions="Center"/>
 
         <Label Text="Humidity"
+               x:Name="HumidityTextLabel"
                FontSize="Large"
                BackgroundColor="Aqua"
                VerticalOptions="Center"/>
 
-        <Label Text="{Binding Humidity}" 
+        <Label x:Name="HumidityLabel" 
                FontSize="Large"
                BackgroundColor="Aqua"
                VerticalOptions="Center"/>

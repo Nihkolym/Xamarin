@@ -6,15 +6,12 @@ namespace DreamMobile.ViewModels
 {
     public class TemperatureViewModel
     {
-        public int Temperature { get; set; }
+        public static int Temperature { get => 33; set { } }
 
-        public int Humidity { get; set; }
+        public static int Humidity { get => 31; set { } }
 
         public TemperatureViewModel()
         {
-            Random random = new Random();
-            Temperature = random.Next(15, 25);
-            Humidity = random.Next(30, 60);
         }
     }
 }

@@ -12,22 +12,24 @@
             <Label Text="{Binding Greeting}"
                 VerticalOptions="Center" FontSize="Medium" />
             <Label Text="DesiresTemperature" 
+                   x:Name="DesiresTemperatureTextLabel"
                    FontSize="Large" 
                    BackgroundColor="Red"
                    VerticalOptions="Center"/>
             
-            <Label Text="{Binding DesiresTemperature}"
-                   FontSize="Large" 
+            <Label FontSize="Large" 
+                   x:Name="DesiresTemperatureLabel"
                    BackgroundColor="Red" 
                    VerticalOptions="Center"/>
             
             <Label Text="DesiresHumidity (%)" 
+                   x:Name="DesiresHumidityTextLabel"
                    FontSize="Large"
                    BackgroundColor="Aqua"
                    VerticalOptions="Center"/>
             
-            <Label Text="{Binding DesiresHumidity}"
-                   FontSize="Large"
+            <Label FontSize="Large"
+                   x:Name="DesiresHumidityLabel"
                    BackgroundColor="Aqua" 
                    VerticalOptions="Center"/>
 

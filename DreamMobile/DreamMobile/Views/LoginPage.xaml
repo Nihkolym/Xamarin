@@ -34,7 +34,9 @@
             </Entry.Behaviors>
         </Entry>
 
-        <Label x:Name="ErrorLable"/>
+        <Label x:Name="ErrorLable"
+               FontSize="Medium"
+               TextColor="Red"/>
         
         <Button Command="{Binding LoginCommand}"
                 Text="Login"
