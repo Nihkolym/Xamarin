@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using DreamMobile.Helpers;
+using Plugin.LocalNotifications;
 
 namespace DreamMobile.Views
 {
@@ -44,6 +45,11 @@ namespace DreamMobile.Views
         private void Button_Clicked_4(object sender, EventArgs e)
         {
             Detail = new NavigationPage(new UserInfoPage());
+        }
+
+        private void Button_Clicked_5(object sender, EventArgs e)
+        {
+            Detail = new NavigationPage(new ReminderPage());
         }
     }
 }

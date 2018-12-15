@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DreamMobile.Views.ReminderPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Remind me every:"
+                   FontSize="Medium"/>
+            <Entry x:Name="RemindEntry"/>
+            <Label Text="Seconds"
+                   FontSize="Medium"/>
+            <Button Text="Enable reminder"
+                    Clicked="Button_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

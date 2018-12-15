@@ -15,7 +15,8 @@
 
         <Entry Text="{Binding Email}" 
                Placeholder="Email"
-               FontSize="30">
+               FontSize="30"
+               x:Name="EmailEntry">
             <Entry.Behaviors>
                 <behaviors:EmailValidationBehavior/>
             </Entry.Behaviors>
@@ -25,7 +26,8 @@
                Placeholder="Your Password" 
                x:Name="Password"
                IsPassword="True"
-               FontSize="30">
+               FontSize="30"
+               >
             <Entry.Behaviors>
                 <behaviors:PasswordValidationBehavior/>
             </Entry.Behaviors>

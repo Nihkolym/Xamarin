@@ -23,6 +23,9 @@
                         Text="Settings"
                         BackgroundColor="White"
                         Clicked="Button_Clicked_2"/>
+                    <Button Text="Reminder"
+                            BackgroundColor="White"
+                            Clicked="Button_Clicked_5"/>
                     <Button
                         Text="Sign Out"
                         BackgroundColor="White"

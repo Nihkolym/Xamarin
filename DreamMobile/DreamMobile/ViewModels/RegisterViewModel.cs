@@ -19,22 +19,6 @@ namespace Dream.ViewModels
         public string Email { get; set; }
 
         public string ConfirmPassword { get; set; }
-
-        public Command RegisterCommand
-        {
-            get
-            {
-                return new Command(async() =>
-                {
-                bool isSuccess = await apiServices.RegisterAsynk(Password, ConfirmPassword, Email);
-                    if (isSuccess)
-                    {
-                        Username = Email;
-                        Settings.Username = Username;
-                        Settings.Password = Password;
-                    }
-                });
-            }
-        }
+        
     }
 }

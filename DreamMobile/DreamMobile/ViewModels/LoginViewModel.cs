@@ -11,24 +11,10 @@ namespace DreamMobile.ViewModels
         private ApiServices _apiServices = new ApiServices();
         
         public string Username { get; set; }
-
-        private string _accessToken = "";
+        
         
         public string Password { get; set; }
         
-        public ICommand LoginCommand =>
-            new Command(async () =>
-            {
-                _accessToken = await _apiServices.LoginAsync(Username, Password);
-                Settings.AccessToken = _accessToken;
-                if(_accessToken != "")
-                {
-                    Settings.Username = Username;
-                    Settings.Password = Password;
-                }
-
-            });
-
         public LoginViewModel()
         {
             Username = Settings.Username;
