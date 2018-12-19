@@ -14,14 +14,10 @@
                  VerticalOptions="Center" 
                  Padding="30"
                  Spacing="30">
-
         <Entry Text="{Binding Username}"
                x:Name="EmailEntry"
                Placeholder="Email"
                FontSize="30">
-            <Entry.Behaviors>
-                <behaviors:EmailValidationBehavior/>
-            </Entry.Behaviors>
         </Entry>
 
         <Entry Text="{Binding Password}"
@@ -29,9 +25,6 @@
                IsPassword="True"
                Placeholder="Password"
                FontSize="30">
-            <Entry.Behaviors>
-                <behaviors:PasswordValidationBehavior/>
-            </Entry.Behaviors>
         </Entry>
 
         <Label x:Name="ErrorLable"

@@ -28,11 +28,7 @@ namespace DreamMobile.Views
         {
             Detail = new NavigationPage(new TemperaturePage());
         }
-
-        private void Button_Clicked_2(object sender, EventArgs e)
-        {
-            Detail = new NavigationPage(new SettingsPage());
-        }
+        
 
         private void Button_Clicked_3(object sender, EventArgs e)
         {

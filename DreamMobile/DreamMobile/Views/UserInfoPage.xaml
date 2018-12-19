@@ -9,14 +9,17 @@
     </ContentPage.BindingContext>
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Username"
+            <Label Margin="10" 
+                   Text="Username"
                    FontSize="Medium"
                    TextColor="Green"/>
-            <Label Text="{Binding Username}" />
+            <Label Text="{Binding Username}"
+                   Margin="10"/>
             <Label Text="{Binding Sickness}"
+                   Margin="10"
                    FontSize="Medium"
                    TextColor="Green"/>
-            <Picker x:Name="picker" SelectedIndexChanged="Picker_SelectedIndexChanged" FontSize="Medium">
+            <Picker Margin="10" x:Name="picker" SelectedIndexChanged="Picker_SelectedIndexChanged" FontSize="Medium">
                 <Picker.Items>
                     <x:String>Headache</x:String>
                     <x:String>Stomachache</x:String>
@@ -25,9 +28,10 @@
                 </Picker.Items>
             </Picker>
             <Label Text="{Binding Gender}"
+                   Margin="10"
                    TextColor="Green"
                    FontSize="Medium"/>
-            <Picker x:Name="genderPicker" SelectedIndexChanged="GenderPicker_SelectedIndexChanged" SelectedItem="Male" FontSize="Medium">
+            <Picker Margin="10" x:Name="genderPicker" SelectedIndexChanged="GenderPicker_SelectedIndexChanged" SelectedItem="Male" FontSize="Medium">
                 <Picker.Items>
                     <x:String>Male</x:String>
                     <x:String>Female</x:String>

@@ -10,31 +10,37 @@
     <ContentPage.Content>
         <StackLayout>
             <Label Text="{Binding Greeting}"
+                   Margin="10"
                 VerticalOptions="Center" FontSize="Medium" />
-            <Label Text="DesiresTemperature" 
+            <Label Text="DesiresTemperature"
+                   Margin="10"
                    x:Name="DesiresTemperatureTextLabel"
                    FontSize="Large" 
                    BackgroundColor="Red"
                    VerticalOptions="Center"/>
             
             <Label FontSize="Large" 
+                   Margin="10"
                    x:Name="DesiresTemperatureLabel"
                    BackgroundColor="Red" 
                    VerticalOptions="Center"/>
             
             <Label Text="DesiresHumidity (%)" 
+                   Margin="10"
                    x:Name="DesiresHumidityTextLabel"
                    FontSize="Large"
                    BackgroundColor="Aqua"
                    VerticalOptions="Center"/>
             
             <Label FontSize="Large"
+                   Margin="10"
                    x:Name="DesiresHumidityLabel"
                    BackgroundColor="Aqua" 
                    VerticalOptions="Center"/>
 
-            <Label Text="Tips:" FontSize="Large"/>
-            <Label Text="Close your eyes and rest, Massage your neck and temples,Warm up your neck Try putting a heating pad or a warm cloth around your neck and the base of your skull to ease tension headaches, Relax. Minimize stress.Watch what you eat and drink." FontSize="Micro"/>
+            <Label Text="Tips:" FontSize="Large"
+                   Margin="10"/>
+            <Label  Margin="10" Text="Close your eyes and rest, Massage your neck and temples,Warm up your neck Try putting a heating pad or a warm cloth around your neck and the base of your skull to ease tension headaches, Relax. Minimize stress.Watch what you eat and drink." FontSize="Micro"/>
 
         </StackLayout>
     </ContentPage.Content>

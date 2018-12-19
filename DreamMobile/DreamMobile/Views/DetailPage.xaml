@@ -19,10 +19,6 @@
                         Text="Temperature"
                         BackgroundColor="White"
                         Clicked="Button_Clicked_1"/>
-                    <Button
-                        Text="Settings"
-                        BackgroundColor="White"
-                        Clicked="Button_Clicked_2"/>
                     <Button Text="Reminder"
                             BackgroundColor="White"
                             Clicked="Button_Clicked_5"/>

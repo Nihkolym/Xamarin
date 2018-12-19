@@ -3,16 +3,25 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DreamMobile.Views.ReminderPage">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout >
             <Label Text="Remind me every:"
                    FontSize="Medium"/>
-            <Entry x:Name="RemindEntry"/>
+            <Entry x:Name="RemindEntry"
+                     FontSize="20"
+                     Margin="10"/>
             <Label Text="Seconds"
                    FontSize="Medium"/>
             <Button Text="Enable reminder"
-                    Clicked="Button_Clicked"/>
+                    Clicked="Button_Clicked"
+                    FontSize="30"
+                    Margin="10"
+                    BackgroundColor="BlueViolet"
+                    />
             <Button Text="Disable reminder"
-                    Clicked="Button_Clicked_1"/>
+                    Clicked="Button_Clicked_1"
+                    FontSize="30"
+                    Margin="10"
+                    BackgroundColor="DarkRed"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
