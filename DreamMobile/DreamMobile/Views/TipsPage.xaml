@@ -1,47 +1,68 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:vm="clr-namespace:DreamMobile.ViewModels"
-             x:Class="DreamMobile.Views.TipsPage"
-             Title="TipsPage">
+<ContentPage
+    x:Class="DreamMobile.Views.TipsPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:DreamMobile.ViewModels"
+    Title="TipsPage">
     <ContentPage.BindingContext>
-        <vm:TipsViewModel/>
+        <vm:TipsViewModel />
     </ContentPage.BindingContext>
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="{Binding Greeting}"
-                   Margin="10"
-                VerticalOptions="Center" FontSize="Medium" />
-            <Label Text="DesiresTemperature"
-                   Margin="10"
-                   x:Name="DesiresTemperatureTextLabel"
-                   FontSize="Large" 
-                   BackgroundColor="Red"
-                   VerticalOptions="Center"/>
-            
-            <Label FontSize="Large" 
-                   Margin="10"
-                   x:Name="DesiresTemperatureLabel"
-                   BackgroundColor="Red" 
-                   VerticalOptions="Center"/>
-            
-            <Label Text="DesiresHumidity (%)" 
-                   Margin="10"
-                   x:Name="DesiresHumidityTextLabel"
-                   FontSize="Large"
-                   BackgroundColor="Aqua"
-                   VerticalOptions="Center"/>
-            
-            <Label FontSize="Large"
-                   Margin="10"
-                   x:Name="DesiresHumidityLabel"
-                   BackgroundColor="Aqua" 
-                   VerticalOptions="Center"/>
+            <Label
+                Margin="10"
+                FontSize="Medium"
+                Text="{Binding Greeting}"
+                VerticalOptions="Center" />
+            <Label
+                x:Name="DesiresTemperatureTextLabel"
+                Margin="10"
+                BackgroundColor="Red"
+                FontSize="Large"
+                Text="Desires Temperature"
+                VerticalOptions="Center" />
 
-            <Label Text="Tips:" FontSize="Large"
-                   Margin="10"/>
-            <Label  Margin="10" Text="Close your eyes and rest, Massage your neck and temples,Warm up your neck Try putting a heating pad or a warm cloth around your neck and the base of your skull to ease tension headaches, Relax. Minimize stress.Watch what you eat and drink." FontSize="Micro"/>
+            <Label
+                x:Name="DesiresTemperatureLabel"
+                Margin="10"
+                BackgroundColor="Red"
+                FontSize="Large"
+                VerticalOptions="Center" />
 
+            <Label
+                x:Name="DesiresHumidityTextLabel"
+                Margin="10"
+                BackgroundColor="Aqua"
+                FontSize="Large"
+                Text="Desires Humidity (%)"
+                VerticalOptions="Center" />
+
+            <Label
+                x:Name="DesiresHumidityLabel"
+                Margin="10"
+                BackgroundColor="Aqua"
+                FontSize="Large"
+                VerticalOptions="Center" />
+
+            <Label
+                Margin="10"
+                FontSize="Medium"
+                Text="Tips:" />
+            <Label
+                x:Name="notes"
+                FontSize="Micro"
+                Text="Close your eyes and rest, Massage your neck and temples,Warm up your neck Try putting a heating pad or a warm cloth around your neck and the base of your skull to ease tension headaches, Relax. Minimize stress.Watch what you eat and drink." />
+
+            <Label
+                Margin="10"
+                FontSize="Medium"
+                Text="Pose:" />
+            <Label
+                x:Name="pose"
+                Margin="10"
+                FontSize="Micro"
+                Text="Close your eyes and rest, Massage your neck and temples,Warm up your neck Try putting a heating pad or a warm cloth around your neck and the base of your skull to ease tension headaches, Relax. Minimize stress.Watch what you eat and drink." />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

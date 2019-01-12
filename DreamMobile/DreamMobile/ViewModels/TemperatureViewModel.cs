@@ -6,9 +6,9 @@ namespace DreamMobile.ViewModels
 {
     public class TemperatureViewModel
     {
-        public static int Temperature { get => 33; set { } }
+        public static int Temperature { get => 21; set { } }
 
-        public static int Humidity { get => 31; set { } }
+        public static int Humidity { get => 50; set { } }
 
         public TemperatureViewModel()
         {

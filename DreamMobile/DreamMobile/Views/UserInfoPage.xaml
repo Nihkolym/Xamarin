@@ -1,42 +1,51 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:viewModel="clr-namespace:DreamMobile.ViewModels"
-             x:Class="DreamMobile.Views.UserInfoPage">
+<ContentPage
+    x:Class="DreamMobile.Views.UserInfoPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewModel="clr-namespace:DreamMobile.ViewModels">
 
     <ContentPage.BindingContext>
-        <viewModel:UserInfoViewModel/>
+        <viewModel:UserInfoViewModel />
     </ContentPage.BindingContext>
     <ContentPage.Content>
         <StackLayout>
-            <Label Margin="10" 
-                   Text="Username"
-                   FontSize="Medium"
-                   TextColor="Green"/>
-            <Label Text="{Binding Username}"
-                   Margin="10"/>
-            <Label Text="{Binding Sickness}"
-                   Margin="10"
-                   FontSize="Medium"
-                   TextColor="Green"/>
-            <Picker Margin="10" x:Name="picker" SelectedIndexChanged="Picker_SelectedIndexChanged" FontSize="Medium">
-                <Picker.Items>
-                    <x:String>Headache</x:String>
-                    <x:String>Stomachache</x:String>
-                    <x:String>Rheum</x:String>
-                    <x:String>Stress</x:String>
-                </Picker.Items>
-            </Picker>
-            <Label Text="{Binding Gender}"
-                   Margin="10"
-                   TextColor="Green"
-                   FontSize="Medium"/>
-            <Picker Margin="10" x:Name="genderPicker" SelectedIndexChanged="GenderPicker_SelectedIndexChanged" SelectedItem="Male" FontSize="Medium">
+            <Label
+                FontSize="Medium"
+                Text="Email"
+                TextColor="Green" />
+            <Label x:Name="email" />
+            <Label
+                FontSize="Medium"
+                Text="{Binding Sickness}"
+                TextColor="Green" />
+            <Picker
+                x:Name="picker"
+                FontSize="Medium"
+                SelectedIndexChanged="Picker_SelectedIndexChanged" />
+            <Label
+                FontSize="Medium"
+                Text="{Binding Gender}"
+                TextColor="Green" />
+            <Picker
+                x:Name="genderPicker"
+                FontSize="Medium"
+                SelectedIndexChanged="GenderPicker_SelectedIndexChanged"
+                SelectedItem="Male">
                 <Picker.Items>
                     <x:String>Male</x:String>
                     <x:String>Female</x:String>
                 </Picker.Items>
             </Picker>
+            <Label
+                FontSize="Medium"
+                Text="Age"
+                TextColor="Green" />
+            <Entry
+                x:Name="agePicker"
+                Keyboard="Numeric"
+                MaxLength="2"
+                Unfocused="Age_FocusChangeRequested" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

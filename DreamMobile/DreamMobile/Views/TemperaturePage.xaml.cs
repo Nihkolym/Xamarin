@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using DreamMobile.Helpers;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -14,8 +14,8 @@ namespace DreamMobile.Views
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class TemperaturePage : ContentPage
     {
-        private string _temperature = TemperatureViewModel.Temperature.ToString();
-        private string _humidity = TemperatureViewModel.Humidity.ToString();
+        private string _temperature = Settings.Temperature;
+        private string _humidity = Settings.Humidity;
 
         private string _desiresTemperature = TipsViewModel.DesiresTemperature.ToString();
         private string _desiresHumidity = TipsViewModel.DesiresTemperature.ToString();

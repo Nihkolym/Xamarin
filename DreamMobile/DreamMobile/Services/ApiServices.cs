@@ -9,6 +9,9 @@ using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using DreamMobile.Services;
+using DreamMobile.Models;
+using DreamMobile.Helpers;
 
 namespace DreamMobile.Services
 {
@@ -16,32 +19,62 @@ namespace DreamMobile.Services
     {
         internal async Task<bool> RegisterAsynk(string password, string confirmPassword, string email)
         {
-            var client = new HttpClient();
-            var model = new RegisterBindingModel
+
+            var model = new List<KeyValuePair<string, string>>
             {
-                Email = email,
-                Password = password,
-                ConfirmPassword = confirmPassword
+                new KeyValuePair<string, string>("email", email),
+                new KeyValuePair<string, string>("password", password),
+                new KeyValuePair<string, string>("lastName", email),
+                new KeyValuePair<string, string>("firstName", email)
             };
-            var json = JsonConvert.SerializeObject(model);
-            HttpContent content = new StringContent(json);
-            content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
-            HttpResponseMessage response = await client.PostAsync("http://localhost:2273/api/account/register", content);
-            
+
+            HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Post,
+                "http://10.0.2.2:8081/api/v1/users/signup")
+            {
+                Content = new FormUrlEncodedContent(model)
+            };
+
+            HttpClient client = new HttpClient();
+            HttpResponseMessage response = await client.SendAsync(request);
+
             return response.IsSuccessStatusCode;
+        }
+
+        internal async Task<User> GetMe()
+        {
+            HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get,
+                "http://10.0.2.2:8081/api/v1/users/me")
+            {
+                Headers =
+                {
+                    Authorization = new AuthenticationHeaderValue(Settings.AccessToken)
+                }
+            };
+
+            HttpClient client = new HttpClient();
+            HttpResponseMessage response = await client.SendAsync(request).ConfigureAwait(false);
+
+            string user = await response.Content.ReadAsStringAsync();
+
+            User user1 = JsonConvert.DeserializeObject<User>(user, new JsonSerializerSettings
+            {
+                NullValueHandling = NullValueHandling.Ignore,
+                MissingMemberHandling = MissingMemberHandling.Ignore
+            });
+
+            return user1;
         }
 
         public async Task<string> LoginAsync(string userName, string password)
         {
             var keyValues = new List<KeyValuePair<string, string>>
             {
-                new KeyValuePair<string, string>("username", userName),
+                new KeyValuePair<string, string>("email", userName),
                 new KeyValuePair<string, string>("password", password),
-                new KeyValuePair<string, string>("grant_type", "password")
             };
 
             HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Post,
-                "http://localhost:2273/Token")
+                "http://10.0.2.2:8081/api/v1/users/login")
             {
                 Content = new FormUrlEncodedContent(keyValues)
             };
@@ -50,11 +83,15 @@ namespace DreamMobile.Services
             HttpResponseMessage response = await client.SendAsync(request);
             string jwt = await response.Content.ReadAsStringAsync();
 
-            JObject jwtDynamic = JsonConvert.DeserializeObject<dynamic>(jwt);
+            JObject jwtDynamic = JsonConvert.DeserializeObject<dynamic>(jwt, new JsonSerializerSettings
+            {
+                NullValueHandling = NullValueHandling.Ignore,
+                MissingMemberHandling = MissingMemberHandling.Ignore
+            });
 
-            var accessToken = jwtDynamic.Value<string>("access_token");
+            var accessToken = jwtDynamic.Value<string>("token");
 
             return accessToken;
-            }
+        }
     }
 }

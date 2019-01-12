@@ -73,5 +73,53 @@ namespace DreamMobile.Helpers
             }
         }
 
+        public static string Temperature
+        {
+            get
+            {
+                return AppSettings.GetValueOrDefault("Temperature", "22");
+            }
+            set
+            {
+                AppSettings.AddOrUpdateValue("Temperature", value);
+            }
+        }
+
+        public static string Humidity
+        {
+            get
+            {
+                return AppSettings.GetValueOrDefault("Humidity", "50");
+            }
+            set
+            {
+                AppSettings.AddOrUpdateValue("Humidity", value);
+            }
+        }
+
+        public static string DesiresTemperature
+        {
+            get
+            {
+                return AppSettings.GetValueOrDefault("DesiresTemperature", "22");
+            }
+            set
+            {
+                AppSettings.AddOrUpdateValue("DesiresTemperature", value);
+            }
+        }
+
+        public static string DesiresHumidity
+        {
+            get
+            {
+                return AppSettings.GetValueOrDefault("DesiresHumidity", "50");
+            }
+            set
+            {
+                AppSettings.AddOrUpdateValue("DesiresHumidity", value);
+            }
+        }
+
     }
 }

@@ -8,16 +8,14 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using DreamMobile.Helpers;
 using Plugin.LocalNotifications;
-
 namespace DreamMobile.Views
 {
-	public partial class DetailPage : MasterDetailPage
-	{
-		public DetailPage ()
-		{
-           
-			InitializeComponent ();
-		}
+    public partial class DetailPage : MasterDetailPage
+    {
+        public DetailPage()
+        {
+            InitializeComponent();
+        }
 
         private void Button_Clicked(object sender, EventArgs e)
         {
@@ -28,13 +26,23 @@ namespace DreamMobile.Views
         {
             Detail = new NavigationPage(new TemperaturePage());
         }
-        
+
+        private void Button_Clicked_2(object sender, EventArgs e)
+        {
+            Detail = new NavigationPage(new SettingsPage());
+        }
 
         private void Button_Clicked_3(object sender, EventArgs e)
         {
             Settings.Username = "";
             Settings.Password = "";
             Settings.AccessToken = "";
+            Settings.DesiresHumidity = "";
+            Settings.Temperature = "";
+            Settings.DesiresTemperature = "";
+            Settings.Humidity = "";
+            Settings.Gender = "";
+            Settings.Sickness = "";
             Navigation.PushAsync(new LoginPage());
         }
 

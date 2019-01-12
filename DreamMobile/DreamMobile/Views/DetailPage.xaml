@@ -1,31 +1,42 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="DreamMobile.Views.DetailPage">
+<MasterDetailPage
+    x:Class="DreamMobile.Views.DetailPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:DreamMobile"
+    xmlns:translator="clr-namespace:LocalizationSample.Helpers">
     <MasterDetailPage.Master>
-        <ContentPage Padding="10" BackgroundColor="Gray" Title="Master">
+        <ContentPage
+            Title="Master"
+            Padding="10"
+            BackgroundColor="Gray">
             <ContentPage.Content>
                 <StackLayout Margin="5,30,5,5">
-                    <Label Text="Healthy Dream"/>
+                    <Label Text="Healthy Dream" />
                     <Button
-                        Text="My info"
                         BackgroundColor="White"
-                        Clicked="Button_Clicked_4"/>
+                        Clicked="Button_Clicked_4"
+                        Text="My info" />
                     <Button
-                        Text="Tips"
                         BackgroundColor="White"
-                        Clicked="Button_Clicked"/>
+                        Clicked="Button_Clicked"
+                        Text="Tips" />
                     <Button
-                        Text="Temperature"
                         BackgroundColor="White"
-                        Clicked="Button_Clicked_1"/>
-                    <Button Text="Reminder"
-                            BackgroundColor="White"
-                            Clicked="Button_Clicked_5"/>
+                        Clicked="Button_Clicked_1"
+                        Text="Temperature" />
                     <Button
-                        Text="Sign Out"
                         BackgroundColor="White"
-                        Clicked="Button_Clicked_3"/>
+                        Clicked="Button_Clicked_2"
+                        Text="Settings" />
+                    <Button
+                        BackgroundColor="White"
+                        Clicked="Button_Clicked_5"
+                        Text="Reminder" />
+                    <Button
+                        BackgroundColor="White"
+                        Clicked="Button_Clicked_3"
+                        Text="Sign Out" />
                 </StackLayout>
             </ContentPage.Content>
         </ContentPage>
@@ -35,7 +46,7 @@
         <ContentPage Padding="10">
             <ContentPage.Content>
                 <StackLayout Margin="5,30,5,5">
-                    <Image Source="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwuFGMgSjQvXkkB_nmzCxNXCdPoDK58suywaqlsjQ2dOMuCLaa"/>
+                    <Image Source="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwuFGMgSjQvXkkB_nmzCxNXCdPoDK58suywaqlsjQ2dOMuCLaa" />
                 </StackLayout>
             </ContentPage.Content>
         </ContentPage>
