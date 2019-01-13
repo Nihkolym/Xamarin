@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Dream.Views.RegisterPage"
              xmlns:viewModels="clr-namespace:Dream.ViewModels"
+             xmlns:i18n="clr-namespace:DreamMobile.Extensions;assembly=DreamMobile"
               xmlns:behaviors ="clr-namespace:DreamMobile.Validators">
     <ContentPage.BindingContext>
         <viewModels:RegisterViewModel/>
@@ -14,7 +15,7 @@
                  Padding="30">
 
         <Entry Text="{Binding Email}" 
-               Placeholder="Email"
+               Placeholder="{i18n:Translate EmailPlaceholder}"
                FontSize="30"
                x:Name="EmailEntry">
             <Entry.Behaviors>
@@ -23,7 +24,7 @@
         </Entry>
 
         <Entry Text="{Binding Password}"
-               Placeholder="Your Password" 
+               Placeholder="{i18n:Translate Password}"
                x:Name="Password"
                IsPassword="True"
                FontSize="30"
@@ -33,7 +34,7 @@
             </Entry.Behaviors>
         </Entry>
         <Entry Text="{Binding ConfirmPassword}" 
-               Placeholder="ConfirmPassword"
+               Placeholder="{i18n:Translate ConfirmPassword}"
                x:Name="ConfirmPassword"
                IsPassword="True"
                FontSize="30">
